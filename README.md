@@ -3,7 +3,7 @@
 Code, per-fold results, and holdout predictions for the paper
 
 > **Assessing the Spectral Sufficiency of UAV Wheat Rust Classification with Views and Band Budgets Derived from One
-> Hyperspectral Acquisition.** Saurav K. Aryal and co-authors. Submitted to *Sensors* (MDPI), 2026.
+> Hyperspectral Acquisition.** Saurav K. Aryal and Aashma Uprety and Ashish Adhikari. Submitted to *Sensors* (MDPI), 2026.
 
 The study asks how much spectral information patch-level classification of wheat rust needs around grain filling.
 It compares the hyperspectral cube of a snapshot camera with the RGB and five-band multispectral views derived from
