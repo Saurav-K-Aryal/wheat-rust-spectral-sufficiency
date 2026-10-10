@@ -1,0 +1,14 @@
+a,b,a_split,b_split,dy,dx,offset_px,diagonal,n_blocks_at_offset,n_shared_blocks,tile_px
+Health_hyper_133,Health_hyper_192,train,train,0,16,16,False,319,319,32
+Health_hyper_147,val_bc1bab51,train,val,-16,0,16,False,319,319,32
+Other_hyper_139,Rust_hyper_48,train,train,16,16,16,True,121,121,32
+Other_hyper_157,val_cc2ca03e,train,val,-16,16,16,True,121,121,32
+Other_hyper_194,Other_hyper_30,train,train,-16,0,16,False,319,319,32
+Rust_hyper_144,Rust_hyper_179,train,train,-16,0,16,False,319,319,32
+Rust_hyper_151,val_f5cf987f,train,val,-16,0,16,False,319,319,32
+Rust_hyper_170,val_059983e0,train,val,-16,0,16,False,319,319,32
+Rust_hyper_188,val_f19e25ce,train,val,0,16,16,False,319,319,32
+Rust_hyper_189,val_a72d6dc0,train,val,16,0,16,False,319,319,32
+val_58df2f68,val_a35051b0,val,val,-16,-16,16,True,121,121,32
+val_857f4536,val_cc2ca03e,val,val,-16,-16,16,True,121,121,32
+val_a51a4db3,val_f4ad06bb,val,val,0,16,16,False,319,319,32

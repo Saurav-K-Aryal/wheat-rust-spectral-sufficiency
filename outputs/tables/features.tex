@@ -1,0 +1,36 @@
+% Written by scripts/tables/02_tables.py from results/. Rebuild instead of editing.
+\begin{table}[H]
+\caption{Engineered feature families per view. Statistics over valid pixels are the mean, standard deviation, and 10th, 50th, and 90th percentiles; the all-views set concatenates the four blocks. Index abbreviations are expanded in the Abbreviations section.\label{tab:features}}
+\begin{adjustwidth}{-\extralength}{0cm}
+\centering
+\small
+\begin{tabularx}{\fulllength}{llrX}
+\toprule
+\textbf{View} & \textbf{Family} & \textbf{Count} & \textbf{Content} \\
+\midrule
+RGB & band & 15 & Per-channel statistics \\
+ & chroma & 15 & Chromatic coordinates r, g, b \\
+ & index & 50 & ExG, ExR, ExGR, VARI, GLI, NGRDI, CIVE, MGRVI, RGBVI, TGI \\
+ & hsv & 18 & Hue, saturation, value statistics and circular hue mean \\
+ & glcm & 12 & GLCM texture of luminance \\
+ & meta & 1 & Valid-pixel fraction \\
+\midrule
+MS & band & 25 & Per-band statistics (482, 550, 650, 738, 834 nm) \\
+ & index & 75 & NDVI, GNDVI, BNDVI, red-edge NDVI, NDREr, NDWI, OSAVI, SAVI, EVI, MCARI, CIgreen, CIrededge, MSR, SR, R/G \\
+ & glcm & 24 & GLCM texture of NIR and NDVI \\
+ & meta & 1 & Valid-pixel fraction \\
+\midrule
+HS (cleaned) & band & 202 & Per-band mean and standard deviation (490 to 890 nm) \\
+ & index & 95 & NDVI, OSAVI, PSSRa, RENDVI, PRI, ARI, ARI2, CRI1, PSRI, MCARI, TCARI, TCARI/OSAVI, MTCI, CIgreen, CIrededge, GM1, GM2, VOG1, linear REP \\
+ & deriv & 21 & First-derivative edges, positions and sums; pixel-level REP and red-edge slope \\
+ & shape & 18 & Green peak, red well, NIR plateau, continuum-removed red well, entropy, band ratios \\
+ & pca & 10 & PCA scores of the patch mean spectrum (fitted in fold) \\
+ & meta & 1 & Valid-pixel fraction \\
+\midrule
+Cross-modal & vegcolor & 15 & RGB colour of MS-vegetated and soil pixels \\
+ & agree & 3 & Pixel agreement of ExG and NDVI \\
+ & mask & 1 & Vegetation fraction from MS NDVI \\
+\bottomrule
+\end{tabularx}
+\end{adjustwidth}
+\end{table}

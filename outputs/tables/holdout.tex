@@ -1,0 +1,21 @@
+% Written by scripts/tables/02_tables.py from results/. Rebuild instead of editing.
+\begin{table}[H]
+\caption{Holdout submissions of this paper, \NSubmissionsAWord{} of the \NSubmissionsWord{} the study made. CV columns are outer-fold means of the same procedure. The range is the central 95 percent of CV-based accuracy for a test set of 205 samples, the size of the private split, from resampled out-of-fold predictions, which reflects the sampling of a test set of that size only, not the variability of refitting or the \NOverlapTrainHoldout{} holdout patches that overlap training patches. Predicted counts are Health/Rust/Other among the \NHoldout{} holdout samples. Public and Private give the leaderboard accuracy on 95 and 205 holdout patches, recorded after all submissions were final; they played no part in choosing any model or configuration.\label{tab:holdout}}
+\begin{adjustwidth}{-\extralength}{0cm}
+\centering
+\small
+\begin{tabularx}{\fulllength}{lXcccccc}
+\toprule
+\textbf{ID} & \textbf{Model} & \textbf{CV macro-F1} & \textbf{CV acc.} & \textbf{95\% range} & \textbf{Predicted} & \textbf{Public} & \textbf{Private} \\
+\midrule
+S01 & FLAML, all views (baseline) & 0.686 & 0.693 & 0.629 to 0.756 & 75/132/93 & 0.705 & 0.746 \\
+S02 & FLAML, RGB view & 0.517 & 0.530 & 0.454 to 0.605 & 47/142/111 & 0.516 & 0.595 \\
+S03 & FLAML, MS view & 0.662 & 0.675 & 0.610 to 0.741 & 87/116/97 & 0.653 & 0.727 \\
+S04 & FLAML, cleaned HS view & 0.680 & 0.691 & 0.624 to 0.761 & 89/121/90 & 0.684 & 0.717 \\
+S05 & TabPFN, all views & 0.727 & 0.732 & 0.668 to 0.795 & 88/126/86 & 0.695 & 0.702 \\
+S07 & FLAML, five bands selected on all training samples & 0.626 & 0.640 & 0.566 to 0.712 & 66/132/102 & 0.705 & 0.693 \\
+S09 & FLAML, RGB features from the HS bands & 0.633 & 0.646 & 0.571 to 0.717 & 79/121/100 & 0.705 & 0.707 \\
+\bottomrule
+\end{tabularx}
+\end{adjustwidth}
+\end{table}

@@ -1,0 +1,16 @@
+feature,gain
+hsc__deriv__SD_blue,114.79082930088043
+ms__index__RENDVI_p10,76.94162580370903
+hsc__index__PSRI_p10,71.27790144830942
+hsc__index__REP_linear_std,67.45844563096762
+cross__agree__corr_ExG_NDVI,58.04162536561489
+rgb__chroma__b_p10,57.288512364029884
+rgb__band__B_p90,55.351489543914795
+rgb__hsv__S_p10,55.13776433467865
+rgb__chroma__b_std,54.652263939380646
+rgb__chroma__b_p90,53.657046012580395
+hsc__index__NDVI_std,53.46351119875908
+rgb__glcm__energy_d1,50.66141612827778
+rgb__hsv__H_resultant,49.447125762701035
+hsc__index__TCARI_OSAVI_std,47.84598130360246
+cross__vegcolor__r_veg_std,47.26647172868252

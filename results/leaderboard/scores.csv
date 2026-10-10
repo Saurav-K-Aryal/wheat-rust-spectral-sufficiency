@@ -1,0 +1,8 @@
+sid,file,message,public_score,private_score
+S01,S01_flaml_all.csv,S01 FLAML baseline all views,0.70526,0.74634
+S02,S02_flaml_rgb.csv,S02 FLAML baseline RGB view,0.51578,0.59512
+S03,S03_flaml_ms.csv,S03 FLAML baseline MS view,0.65263,0.72682
+S04,S04_flaml_hs_clean.csv,S04 FLAML baseline cleaned HS view,0.68421,0.71707
+S05,S05_tabpfn_all.csv,S05 TabPFN all views,0.69473,0.70243
+S07,S07_flaml_bandsel5.csv,S07 FLAML optimally placed five bands,0.70526,0.69268
+S09,S09_flaml_rgb_from_hs.csv,S09 FLAML single-source RGB features from HS bands,0.70526,0.70731

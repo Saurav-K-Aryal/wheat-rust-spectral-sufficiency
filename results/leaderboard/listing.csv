@@ -1,0 +1,8 @@
+ref,fileName,date,description,status,publicScore,privateScore
+57012268,S01_flaml_all.csv,2026-10-09 14:43:51.873000,S01 FLAML baseline all views,SubmissionStatus.COMPLETE,0.70526,0.74634
+57012277,S02_flaml_rgb.csv,2026-10-09 14:44:04.767000,S02 FLAML baseline RGB view,SubmissionStatus.COMPLETE,0.51578,0.59512
+57012284,S03_flaml_ms.csv,2026-10-09 14:44:17.760000,S03 FLAML baseline MS view,SubmissionStatus.COMPLETE,0.65263,0.72682
+57012292,S04_flaml_hs_clean.csv,2026-10-09 14:44:30.747000,S04 FLAML baseline cleaned HS view,SubmissionStatus.COMPLETE,0.68421,0.71707
+57012297,S07_flaml_bandsel5.csv,2026-10-09 14:44:43.910000,S07 FLAML optimally placed five bands,SubmissionStatus.COMPLETE,0.70526,0.69268
+57012304,S09_flaml_rgb_from_hs.csv,2026-10-09 14:44:56.957000,S09 FLAML single-source RGB features from HS bands,SubmissionStatus.COMPLETE,0.70526,0.70731
+57012309,S05_tabpfn_all.csv,2026-10-09 14:45:10.080000,S05 TabPFN all views,SubmissionStatus.COMPLETE,0.69473,0.70243

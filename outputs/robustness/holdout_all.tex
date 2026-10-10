@@ -1,0 +1,24 @@
+% Written by scripts/tables/04_robustness.py from results/. Rebuild instead of editing.
+\begin{table}[H]
+\caption{All \NSubmissionsWord{} holdout submissions of the study. The seven marked yes are those of Table~\ref{tab:holdout}; the other three use a learner or an input outside the scope of this paper, and their code and per-fold results are not part of the repository. CV acc.\ is the outer-fold mean of the same procedure, and the range is the central 95 percent of CV-based accuracy for a test set of \KagglePrivateN{} samples, the size of the private split. Predicted counts are Health/Rust/Other among the \NHoldout{} holdout samples. Public and Private give the leaderboard accuracy on \KagglePublicN{} and \KagglePrivateN{} holdout patches, recorded after all submissions were final.\label{tab:holdout-all}}
+\begin{adjustwidth}{-\extralength}{0cm}
+\centering
+\footnotesize
+\begin{tabularx}{\fulllength}{lXcccccc}
+\toprule
+\textbf{ID} & \textbf{Model} & \textbf{In paper} & \textbf{CV acc.} & \textbf{95\% range} & \textbf{Predicted} & \textbf{Public} & \textbf{Private} \\
+\midrule
+S01 & FLAML, all views (baseline) & yes & 0.693 & 0.629 to 0.756 & 75/132/93 & 0.705 & 0.746 \\
+S02 & FLAML, RGB view & yes & 0.530 & 0.454 to 0.605 & 47/142/111 & 0.516 & 0.595 \\
+S03 & FLAML, MS view & yes & 0.675 & 0.610 to 0.741 & 87/116/97 & 0.653 & 0.727 \\
+S04 & FLAML, cleaned HS view & yes & 0.691 & 0.624 to 0.761 & 89/121/90 & 0.684 & 0.717 \\
+S05 & TabPFN, all views & yes & 0.732 & 0.668 to 0.795 & 88/126/86 & 0.695 & 0.702 \\
+S06 & HybridSN-style network, cleaned HS cube & no & 0.684 & 0.620 to 0.751 & 75/130/95 & 0.663 & 0.727 \\
+S07 & FLAML, five bands selected on all training samples & yes & 0.640 & 0.566 to 0.712 & 66/132/102 & 0.705 & 0.693 \\
+S08 & FLAML, simulated five-band camera & no & 0.664 & 0.595 to 0.732 & 91/117/92 & 0.663 & 0.722 \\
+S09 & FLAML, RGB features from the HS bands & yes & 0.646 & 0.571 to 0.717 & 79/121/100 & 0.705 & 0.707 \\
+S10 & Shrinkage LDA, all views & no & 0.693 & 0.629 to 0.756 & 88/123/89 & 0.779 & 0.766 \\
+\bottomrule
+\end{tabularx}
+\end{adjustwidth}
+\end{table}

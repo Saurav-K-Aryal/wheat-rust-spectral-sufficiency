@@ -1,0 +1,13 @@
+{
+  "metric": "accuracy",
+  "private_fractions": [
+    0.6833333333333333
+  ],
+  "n_public": 95,
+  "n_private": 205,
+  "n_holdout": 300,
+  "n_submissions": 10,
+  "n_study_entries": 10,
+  "basis": "Inferred from the returned scores: every public score is a whole number of correct patches out of 95 and every private score out of 205, and 95 + 205 = 300 holdout samples, the only pair of sizes that fits all ten scores of the study. This confirms accuracy as the leaderboard metric.",
+  "note": "The study submitted ten files; this repository holds the seven that the paper reports (S01 to S05, S07, S09). n_submissions counts all ten."
+}

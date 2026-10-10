@@ -1,0 +1,44 @@
+% Written by scripts/tables/02_tables.py from results/. Rebuild instead of editing.
+\begin{table}[H]
+\caption{Feature-family and dimensionality ablations with the FLAML baseline learner. $\Delta$ is the mean paired difference in macro-F1 from the full feature set of the same view on the same outer folds, and the probabilities are the posteriors of the Bayesian correlated $t$-test that the variant is better by more than \ROPE{}, within plus or minus \ROPE{}, or worse by more than \ROPE{}. Macro-F1 values are means $\pm$ standard deviations over the \NOuterFolds{} outer folds.\label{tab:ablation}}
+\begin{adjustwidth}{-\extralength}{0cm}
+\centering
+\small
+\begin{tabularx}{\fulllength}{Xccccc}
+\toprule
+\textbf{Variant} & \textbf{Macro-F1} & \textbf{$\Delta$} & \textbf{P(better)} & \textbf{P(equiv.)} & \textbf{P(worse)} \\
+\midrule
+\textit{RGB view}, full set & 0.517 $\pm$ 0.041 & reference & & &  \\
+without band statistics & 0.516 $\pm$ 0.044 & $-$0.001 & 0.10 & 0.78 & 0.12 \\
+without chromatic coordinates & 0.519 $\pm$ 0.034 & +0.002 & 0.15 & 0.74 & 0.11 \\
+without colour indices & 0.520 $\pm$ 0.039 & +0.004 & 0.18 & 0.72 & 0.10 \\
+without HSV & 0.524 $\pm$ 0.038 & +0.007 & 0.23 & 0.71 & 0.07 \\
+without GLCM & 0.481 $\pm$ 0.043 & $-$0.036 & $<$0.01 & 0.20 & 0.79 \\
+\midrule
+\textit{MS view}, full set & 0.662 $\pm$ 0.038 & reference & & &  \\
+without band statistics & 0.670 $\pm$ 0.038 & +0.008 & 0.23 & 0.73 & 0.05 \\
+without vegetation indices & 0.621 $\pm$ 0.045 & $-$0.042 & 0.01 & 0.20 & 0.79 \\
+without GLCM & 0.656 $\pm$ 0.036 & $-$0.007 & 0.09 & 0.66 & 0.25 \\
+\midrule
+\textit{HS view (cleaned)}, full set & 0.680 $\pm$ 0.035 & reference & & &  \\
+without band statistics & 0.695 $\pm$ 0.041 & +0.015 & 0.41 & 0.53 & 0.06 \\
+without indices & 0.660 $\pm$ 0.049 & $-$0.020 & 0.04 & 0.45 & 0.50 \\
+without derivative features & 0.680 $\pm$ 0.037 & 0.000 & 0.11 & 0.78 & 0.11 \\
+without shape features & 0.682 $\pm$ 0.041 & +0.002 & 0.13 & 0.78 & 0.09 \\
+without PCA scores & 0.657 $\pm$ 0.040 & $-$0.023 & 0.02 & 0.41 & 0.57 \\
+PCA only, 3 scores & 0.614 $\pm$ 0.038 & $-$0.067 & $<$0.01 & 0.02 & 0.98 \\
+PCA only, 5 scores & 0.625 $\pm$ 0.041 & $-$0.055 & $<$0.01 & 0.05 & 0.95 \\
+PCA only, 10 scores & 0.642 $\pm$ 0.038 & $-$0.038 & $<$0.01 & 0.19 & 0.81 \\
+PCA only, 20 scores & 0.638 $\pm$ 0.044 & $-$0.043 & $<$0.01 & 0.16 & 0.84 \\
+PCA only, 95 percent variance & 0.594 $\pm$ 0.035 & $-$0.087 & $<$0.01 & $<$0.01 & $>$0.99 \\
+\midrule
+\textit{All views}, full set & 0.686 $\pm$ 0.039 & reference & & &  \\
+without RGB & 0.686 $\pm$ 0.039 & 0.000 & 0.12 & 0.75 & 0.12 \\
+without MS & 0.671 $\pm$ 0.045 & $-$0.015 & 0.03 & 0.59 & 0.38 \\
+without HS & 0.657 $\pm$ 0.037 & $-$0.029 & $<$0.01 & 0.29 & 0.71 \\
+without cross-modal & 0.681 $\pm$ 0.043 & $-$0.005 & 0.06 & 0.78 & 0.16 \\
+RFECV selection in the inner loop & 0.681 $\pm$ 0.040 & $-$0.005 & 0.06 & 0.76 & 0.18 \\
+\bottomrule
+\end{tabularx}
+\end{adjustwidth}
+\end{table}

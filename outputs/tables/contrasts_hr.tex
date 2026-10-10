@@ -1,0 +1,42 @@
+% Written by scripts/tables/02_tables.py from results/. Rebuild instead of editing.
+\begin{table}[H]
+\caption{Health versus Rust AUC contrasts cited in the paper, by family (ROPE of plus or minus \ROPE{} AUC).\label{tab:contrasts-hr}}
+\begin{adjustwidth}{-\extralength}{0cm}
+\centering
+\footnotesize
+\begin{tabularx}{\fulllength}{>{\raggedright\arraybackslash}X cccccc>{\raggedright\arraybackslash}p{2.75cm}}
+\toprule
+\textbf{Contrast (A minus B)} & \textbf{Diff.} & \textbf{P(A$>$B)} & \textbf{P(equiv.)} & \textbf{P(A$<$B)} & \textbf{$p$} & \textbf{$p$, Holm} & \textbf{Verdict} \\
+\midrule
+\multicolumn{8}{l}{\textit{Health versus Rust AUC, all Health and Rust patches$^{\dagger}$}} \\
+cleaned HS minus MS, FLAML & +0.037 & 0.78 & 0.21 & 0.01 & 0.090 & 0.540 & better, probable \\
+MS minus RGB features from HS bands, FLAML & +0.023 & 0.55 & 0.41 & 0.04 & 0.333 & 0.999 & leaning better \\
+RGB features from HS bands minus RGB PNG, FLAML & +0.153 & $>$0.99 & $<$0.01 & $<$0.01 & $<$0.001 & $<$0.001 & better, clear \\
+all views minus cleaned HS, FLAML & $-$0.013 & 0.06 & 0.58 & 0.36 & 0.541 & 0.999 & leaning equivalent \\
+fixed MS minus fixed RGB placement, FLAML & +0.064 & 0.97 & 0.03 & $<$0.01 & 0.010 & 0.077 & better, clear \\
+five selected bands minus fixed MS placement, FLAML & $-$0.038 & 0.04 & 0.25 & 0.71 & 0.245 & 0.980 & leaning worse \\
+cleaned HS minus MS, TabPFN & +0.030 & 0.78 & 0.22 & $<$0.01 & 0.026 & 0.180 & better, probable \\
+MS minus RGB features from HS bands, TabPFN & +0.060 & 0.98 & 0.02 & $<$0.01 & 0.003 & 0.029 & better, clear \\
+RGB features from HS bands minus RGB PNG, TabPFN & +0.118 & $>$0.99 & $<$0.01 & $<$0.01 & 0.001 & 0.013 & better, clear \\
+fixed MS minus fixed RGB placement, TabPFN & +0.078 & $>$0.99 & $<$0.01 & $<$0.01 & $<$0.001 & $<$0.001 & better, clear \\
+five selected bands minus fixed MS placement, TabPFN & $-$0.045 & 0.01 & 0.17 & 0.82 & 0.103 & 0.540 & worse, probable \\
+cleaned HS minus MS, raw band statistics, FLAML & +0.024 & 0.55 & 0.37 & 0.08 & 0.432 & 0.999 & leaning better \\
+\midrule
+\multicolumn{8}{l}{\textit{Health versus Rust AUC, vegetated patches only$^{\dagger}$}} \\
+cleaned HS minus MS, FLAML & +0.056 & 0.89 & 0.10 & 0.01 & 0.059 & 0.353 & better, probable \\
+MS minus RGB features from HS bands, FLAML & +0.021 & 0.51 & 0.39 & 0.10 & 0.500 & 1.000 & leaning better \\
+RGB features from HS bands minus RGB PNG, FLAML & +0.181 & $>$0.99 & $<$0.01 & $<$0.01 & $<$0.001 & $<$0.001 & better, clear \\
+all views minus cleaned HS, FLAML & $-$0.019 & 0.06 & 0.46 & 0.48 & 0.432 & 1.000 & inconclusive \\
+fixed MS minus fixed RGB placement, FLAML & +0.081 & 0.98 & 0.02 & $<$0.01 & 0.010 & 0.077 & better, clear \\
+five selected bands minus fixed MS placement, FLAML & $-$0.042 & 0.06 & 0.23 & 0.71 & 0.282 & 1.000 & leaning worse \\
+cleaned HS minus MS, TabPFN & +0.042 & 0.89 & 0.11 & $<$0.01 & 0.021 & 0.144 & better, probable \\
+MS minus RGB features from HS bands, TabPFN & +0.082 & 0.99 & 0.01 & $<$0.01 & 0.004 & 0.038 & better, clear \\
+RGB features from HS bands minus RGB PNG, TabPFN & +0.151 & $>$0.99 & $<$0.01 & $<$0.01 & 0.002 & 0.017 & better, clear \\
+fixed MS minus fixed RGB placement, TabPFN & +0.104 & $>$0.99 & $<$0.01 & $<$0.01 & $<$0.001 & $<$0.001 & better, clear \\
+five selected bands minus fixed MS placement, TabPFN & $-$0.058 & 0.01 & 0.12 & 0.86 & 0.098 & 0.490 & worse, probable \\
+cleaned HS minus MS, raw band statistics, FLAML & +0.034 & 0.65 & 0.28 & 0.07 & 0.348 & 1.000 & leaning better \\
+\bottomrule
+\end{tabularx}
+\end{adjustwidth}
+\noindent{\footnotesize Diff.\ is the mean paired difference over outer folds. The three probabilities are the posteriors of the Bayesian correlated $t$-test with a ROPE of plus or minus \ROPE{}, $p$ is the two-sided corrected resampled $t$-test, and Holm adjusts $p$ within each family (block). The verdict applies the thresholds of Section~\ref{sec:results} to the largest posterior. $^{\dagger}$Added after the first round of results.}
+\end{table}

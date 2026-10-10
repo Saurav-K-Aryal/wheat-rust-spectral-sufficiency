@@ -1,0 +1,29 @@
+% Written by scripts/tables/02_tables.py from results/. Rebuild instead of editing.
+\begin{table}[H]
+\caption{Spectral configuration and representation with the FLAML baseline learner. The single-source rows compute every RGB or MS feature directly from the matching HS bands at native resolution, without the provider's resampling, stretch, or 8-bit quantisation. $^{\dagger}$The stretch control, added after the first round of results, applies the per-image 2 to 98 percent stretch and 8-bit quantisation to those HS bands. Acc.\ is accuracy. $\Delta$ is the mean paired difference in macro-F1 from the all-views engineered baseline on the same folds, and the probabilities are the posteriors of the Bayesian correlated $t$-test that the row is better than the baseline by more than \ROPE{}, within plus or minus \ROPE{} of it, or worse by more than \ROPE{}. Values are means $\pm$ standard deviations over the \NOuterFolds{} outer folds.\label{tab:views}}
+\begin{adjustwidth}{-\extralength}{0cm}
+\centering
+\small
+\begin{tabularx}{\fulllength}{>{\raggedright\arraybackslash}p{3.6cm}lcccccc}
+\toprule
+\textbf{View} & \textbf{Representation} & \textbf{Macro-F1} & \textbf{Acc.} & \textbf{$\Delta$} & \textbf{P(better)} & \textbf{P(equiv.)} & \textbf{P(worse)} \\
+\midrule
+RGB PNG & raw band statistics & 0.486 $\pm$ 0.049 & 0.500 & $-$0.200 & $<$0.01 & $<$0.01 & $>$0.99 \\
+ & engineered & 0.517 $\pm$ 0.041 & 0.530 & $-$0.169 & $<$0.01 & $<$0.01 & $>$0.99 \\
+RGB features from HS bands & engineered & 0.633 $\pm$ 0.042 & 0.646 & $-$0.052 & $<$0.01 & 0.10 & 0.90 \\
+RGB features from stretched HS bands$^{\dagger}$ & engineered & 0.497 $\pm$ 0.038 & 0.508 & $-$0.189 & $<$0.01 & $<$0.01 & $>$0.99 \\
+MS file & raw band statistics & 0.608 $\pm$ 0.042 & 0.620 & $-$0.078 & $<$0.01 & 0.01 & 0.99 \\
+ & engineered & 0.662 $\pm$ 0.038 & 0.675 & $-$0.024 & 0.01 & 0.41 & 0.57 \\
+MS features from HS bands & engineered & 0.658 $\pm$ 0.040 & 0.672 & $-$0.028 & 0.01 & 0.33 & 0.67 \\
+Cleaned HS (101 bands) & raw band statistics & 0.606 $\pm$ 0.037 & 0.619 & $-$0.080 & $<$0.01 & $<$0.01 & $>$0.99 \\
+ & engineered & 0.680 $\pm$ 0.035 & 0.691 & $-$0.006 & 0.10 & 0.67 & 0.23 \\
+ & PCA (10 scores) & 0.642 $\pm$ 0.038 & 0.649 & $-$0.044 & $<$0.01 & 0.12 & 0.88 \\
+Full HS (125 bands) & raw band statistics & 0.597 $\pm$ 0.032 & 0.612 & $-$0.089 & $<$0.01 & $<$0.01 & $>$0.99 \\
+ & engineered & 0.674 $\pm$ 0.045 & 0.683 & $-$0.012 & 0.11 & 0.52 & 0.37 \\
+ & PCA (10 scores) & 0.617 $\pm$ 0.046 & 0.629 & $-$0.069 & $<$0.01 & 0.03 & 0.97 \\
+All views & raw band statistics & 0.615 $\pm$ 0.042 & 0.633 & $-$0.071 & $<$0.01 & 0.02 & 0.98 \\
+ & engineered (baseline) & 0.686 $\pm$ 0.039 & 0.693 & reference & & &  \\
+\bottomrule
+\end{tabularx}
+\end{adjustwidth}
+\end{table}

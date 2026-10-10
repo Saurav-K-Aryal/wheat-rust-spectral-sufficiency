@@ -1,0 +1,23 @@
+% Written by scripts/tables/04_robustness.py from results/. Rebuild instead of editing.
+\begin{table}[H]
+\caption{Holdout class priors estimated from the submitted predictions. For each submission the priors $q$ solve $M q = s$ with $q \geq 0$ and $\sum q = 1$, where $s$ holds the shares of the predicted classes among the \NHoldout{} holdout patches and $M_{ij}$ the cross-validated probability of predicting class $i$ for a patch of class $j$; the last row fits all seven submissions at once. Intervals are central 95 percent bootstrap intervals over training and holdout patches. Training has \NPerClass{} patches per class, priors of one third each. CV acc.\ is the outer-fold mean accuracy, as in Table~\ref{tab:holdout}, and Expected acc.\ the accuracy under the joint priors, the sum over classes of prior times cross-validated recall. The cross-validated confusion matrix stands in for that of each refitted model. No holdout label is used.\label{tab:label-shift}}
+\begin{adjustwidth}{-\extralength}{0cm}
+\centering
+\footnotesize
+\begin{tabularx}{\fulllength}{lccccccc}
+\toprule
+\textbf{ID} & \textbf{Predicted} & \textbf{Health prior} & \textbf{Rust prior} & \textbf{Other prior} & \textbf{CV acc.} & \textbf{Expected acc.} & \textbf{Private} \\
+\midrule
+S01 & 75/132/93 & 0.28 (0.06 to 0.50) & 0.41 (0.25 to 0.58) & 0.31 (0.21 to 0.41) & 0.693 & 0.676 & 0.746 \\
+S02 & 47/142/111 & 0.00 (0.00 to 0.95) & 0.59 (0.00 to 0.68) & 0.41 (0.05 to 0.52) & 0.530 & 0.509 & 0.595 \\
+S03 & 87/116/97 & 0.54 (0.29 to 0.84) & 0.22 (0.00 to 0.39) & 0.24 (0.11 to 0.36) & 0.675 & 0.655 & 0.727 \\
+S04 & 89/121/90 & 0.52 (0.28 to 0.83) & 0.25 (0.03 to 0.42) & 0.23 (0.09 to 0.35) & 0.691 & 0.673 & 0.717 \\
+S05 & 88/126/86 & 0.36 (0.20 to 0.54) & 0.36 (0.22 to 0.48) & 0.28 (0.20 to 0.37) & 0.732 & 0.718 & 0.702 \\
+S07 & 66/132/102 & 0.20 (0.00 to 0.67) & 0.45 (0.14 to 0.64) & 0.35 (0.18 to 0.47) & 0.640 & 0.619 & 0.693 \\
+S09 & 79/121/100 & 0.41 (0.08 to 0.81) & 0.30 (0.00 to 0.54) & 0.29 (0.14 to 0.42) & 0.646 & 0.625 & 0.707 \\
+\midrule
+All seven, jointly & & 0.38 (0.22 to 0.55) & 0.33 (0.21 to 0.45) & 0.29 (0.20 to 0.37) & & &  \\
+\bottomrule
+\end{tabularx}
+\end{adjustwidth}
+\end{table}

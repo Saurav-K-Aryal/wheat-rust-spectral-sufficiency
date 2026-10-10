@@ -1,0 +1,4 @@
+sid,file,message,model,n_Health,n_Rust,n_Other,public_score,private_score,cv_accuracy,cv_accuracy_sd,n_private,range_lo95,range_hi95
+S06,S06_deep_v2_hs_hybridsn.csv,S06 best deep model,Compact HybridSN-style 3D and 2D convolutional network on in-fold PCA scores of the cleaned HS cube,75,130,95,0.66315,0.72682,0.6843333333333332,0.0391824038437543,205,0.6195121951219512,0.751219512195122
+S08,S08_flaml_sim_rededge_mx.csv,S08 FLAML simulated five-band camera,FLAML on a simulated commercial five-band camera (Gaussian band responses at published centres and widths),91,117,92,0.66315,0.72195,0.6643333333333332,0.0323862040559236,205,0.5951219512195122,0.7317073170731707
+S10,S10_slda_all.csv,S10 shrinkage LDA all views,Shrinkage LDA on the all-views engineered features,88,123,89,0.77894,0.76585,0.6928333333333333,0.0390508854615205,205,0.6292682926829268,0.7560975609756098

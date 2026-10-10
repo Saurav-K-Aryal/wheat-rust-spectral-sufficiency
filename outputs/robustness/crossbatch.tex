@@ -1,0 +1,27 @@
+% Written by scripts/tables/04_robustness.py from results/. Rebuild instead of editing.
+\begin{table}[H]
+\caption{Transfer between the two HS file formats. Each model was trained on the training files of one format and tested on those of the other (\NHSOneTwentySixTrain{} of the \NTrain{} training files carry 126 bands, \NHSOneTwentySixPerClass{} per class), and, as the reference, on stratified random splits with the same sizes and class counts. Values are macro-F1, mean $\pm$ standard deviation over five seeds. Cost is the random split minus the transfer.\label{tab:crossbatch}}
+\begin{adjustwidth}{-\extralength}{0cm}
+\centering
+\small
+\begin{tabularx}{\fulllength}{lllccc}
+\toprule
+\textbf{Learner} & \textbf{Input} & \textbf{Train to test} & \textbf{Transfer} & \textbf{Random split} & \textbf{Cost} \\
+\midrule
+FLAML & All views & 125 to 126 bands & 0.637 $\pm$ 0.031 & 0.670 $\pm$ 0.057 & 0.033 \\
+FLAML & All views & 126 to 125 bands & 0.565 $\pm$ 0.019 & 0.636 $\pm$ 0.021 & 0.070 \\
+FLAML & MS & 125 to 126 bands & 0.558 $\pm$ 0.023 & 0.679 $\pm$ 0.023 & 0.121 \\
+FLAML & MS & 126 to 125 bands & 0.571 $\pm$ 0.010 & 0.609 $\pm$ 0.012 & 0.038 \\
+FLAML & Cleaned HS & 125 to 126 bands & 0.650 $\pm$ 0.020 & 0.659 $\pm$ 0.019 & 0.009 \\
+FLAML & Cleaned HS & 126 to 125 bands & 0.539 $\pm$ 0.006 & 0.611 $\pm$ 0.024 & 0.072 \\
+\midrule
+TabPFN & All views & 125 to 126 bands & 0.634 $\pm$ 0.016 & 0.718 $\pm$ 0.050 & 0.084 \\
+TabPFN & All views & 126 to 125 bands & 0.580 $\pm$ 0.003 & 0.647 $\pm$ 0.019 & 0.067 \\
+TabPFN & MS & 125 to 126 bands & 0.569 $\pm$ 0.027 & 0.688 $\pm$ 0.061 & 0.119 \\
+TabPFN & MS & 126 to 125 bands & 0.589 $\pm$ 0.004 & 0.634 $\pm$ 0.017 & 0.045 \\
+TabPFN & Cleaned HS & 125 to 126 bands & 0.614 $\pm$ 0.010 & 0.729 $\pm$ 0.048 & 0.116 \\
+TabPFN & Cleaned HS & 126 to 125 bands & 0.573 $\pm$ 0.006 & 0.647 $\pm$ 0.004 & 0.074 \\
+\bottomrule
+\end{tabularx}
+\end{adjustwidth}
+\end{table}

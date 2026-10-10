@@ -1,0 +1,21 @@
+% Written by scripts/tables/02_tables.py from results/. Rebuild instead of editing.
+\begin{table}[H]
+\caption{Views on the disease-relevant decision, with both learners and engineered features. The Health versus Rust ROC AUC uses the Rust score $p_{\mathrm{R}}/(p_{\mathrm{H}}+p_{\mathrm{R}})$ on the true Health and Rust patches of each outer fold, either all of them or only the vegetated ones (not empty and patch mean NDVI of at least 0.5, 148 Health and 200 Rust patches). Healthy as Rust is the share of Health patches that the three-class argmax labelled Rust, pooled over outer folds. AUC and macro-F1 values are means over \NOuterFolds{} outer folds, and the standard deviation of the AUC over folds ranged from 0.038 to 0.065 on all patches and from 0.046 to 0.080 on vegetated patches. $^{\dagger}$The stretch control applies the per-image stretch and 8-bit quantisation of the RGB product to the HS bands. Everything except FLAML macro-F1 was added after the first round of results.\label{tab:hr}}
+\begin{adjustwidth}{-\extralength}{0cm}
+\centering
+\small
+\begin{tabularx}{\fulllength}{>{\raggedright\arraybackslash}p{4.6cm}*{8}{>{\centering\arraybackslash}X}}
+\toprule
+& \multicolumn{2}{c}{\textbf{AUC, all patches}} & \multicolumn{2}{c}{\textbf{AUC, vegetated}} & \multicolumn{2}{c}{\textbf{Healthy as Rust (\%)}} & \multicolumn{2}{c}{\textbf{Macro-F1}} \\ \cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}\cmidrule(lr){8-9} \textbf{View} & FLAML & TabPFN & FLAML & TabPFN & FLAML & TabPFN & FLAML & TabPFN \\
+\midrule
+RGB PNG & 0.592 & 0.628 & 0.489 & 0.506 & 46 & 58 & 0.517 & 0.544 \\
+RGB features from HS bands & 0.745 & 0.747 & 0.669 & 0.658 & 38 & 45 & 0.633 & 0.626 \\
+RGB features from stretched HS bands$^{\dagger}$ & 0.592 & 0.628 & 0.498 & 0.512 & 43 & 55 & 0.497 & 0.520 \\
+MS file & 0.768 & 0.807 & 0.690 & 0.740 & 36 & 35 & 0.662 & 0.693 \\
+MS features from HS bands & 0.762 & 0.813 & 0.684 & 0.748 & 37 & 35 & 0.658 & 0.698 \\
+Cleaned HS & 0.805 & 0.837 & 0.746 & 0.781 & 34 & 31 & 0.680 & 0.723 \\
+All views & 0.792 & 0.836 & 0.727 & 0.780 & 33 & 31 & 0.686 & 0.727 \\
+\bottomrule
+\end{tabularx}
+\end{adjustwidth}
+\end{table}

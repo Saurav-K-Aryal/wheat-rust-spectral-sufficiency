@@ -1,0 +1,21 @@
+% Written by scripts/tables/04_robustness.py from results/. Rebuild instead of editing.
+\begin{table}[H]
+\caption{Cleaned HS minus MS in the Health versus Rust AUC on vegetated patches, for several NDVI thresholds of the vegetated subset (not empty and patch-mean NDVI at or above the threshold). Patches gives the vegetated Health and Rust patches, and NDVI AUC the separation of the two classes by patch-mean NDVI alone, lower NDVI counting as Rust, which shows that the Health patches left by a threshold stay greener than the Rust patches. The last row repeats the paper's threshold with weights that give both classes the same distribution over NDVI quintiles. Diff.\ is the mean paired difference over outer folds with its central 95 percent credible interval, and the verdict labels the posteriors with a ROPE of plus or minus \ROPE{} AUC. Verdicts take the largest of the three posteriors and call it clear above 0.95, probable above 0.75, and leaning above 0.5, and inconclusive otherwise. prob.\ is probable and lean.\ leaning. The paper's threshold of 0.5 was fixed from the audit before the analysis.\label{tab:ndvi-threshold}}
+\begin{adjustwidth}{-\extralength}{0cm}
+\centering
+\footnotesize
+\begin{tabularx}{\fulllength}{lcccccc}
+\toprule
+& & & \multicolumn{2}{c}{\textbf{FLAML}} & \multicolumn{2}{c}{\textbf{TabPFN}} \\ \cmidrule(lr){4-5}\cmidrule(lr){6-7} \textbf{NDVI} & \textbf{Patches} & \textbf{NDVI AUC} & \textbf{Diff. (95\% CrI)} & \textbf{Verdict} & \textbf{Diff. (95\% CrI)} & \textbf{Verdict} \\
+\midrule
+0.3 & 169/200 & 0.52 & +0.046 ($-$0.005, +0.096) & prob. better & +0.037 (+0.006, +0.068) & prob. better \\
+0.4 & 163/200 & 0.53 & +0.048 ($-$0.004, +0.100) & prob. better & +0.038 (+0.006, +0.070) & prob. better \\
+0.5 (paper) & 148/200 & 0.59 & +0.056 ($-$0.002, +0.113) & prob. better & +0.042 (+0.007, +0.077) & prob. better \\
+0.6 & 129/183 & 0.64 & +0.048 ($-$0.014, +0.109) & prob. better & +0.046 (+0.001, +0.090) & prob. better \\
+0.7 & 93/112 & 0.66 & +0.048 ($-$0.031, +0.126) & prob. better & +0.071 (+0.016, +0.127) & clear better \\
+\midrule
+0.5, balanced & 148/200 & 0.51 & +0.065 (+0.006, +0.124) & prob. better & +0.053 (+0.015, +0.090) & clear better \\
+\bottomrule
+\end{tabularx}
+\end{adjustwidth}
+\end{table}

@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use this software or its results, please cite it as below."
+title: "Spectral sufficiency of UAV wheat rust classification: code and results"
+authors:
+  - family-names: Aryal
+    given-names: Saurav K.
+    affiliation: Howard University
+license: MIT
+keywords:
+  - wheat rust
+  - hyperspectral imaging
+  - multispectral imaging
+  - UAV
+  - band selection

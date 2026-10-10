@@ -1,0 +1,16 @@
+numpy==2.5.3
+pandas==3.0.6
+scipy==1.18.1
+scikit-learn==1.9.1
+scikit-image==0.26.0
+pillow==12.3.0
+tifffile==2026.9.20
+rasterio==1.5.2
+matplotlib==3.11.2
+threadpoolctl==3.7.0
+flaml==2.7.0
+lightgbm==4.7.0
+xgboost==2.1.4
+torch==2.14.1
+tabpfn==9.1.0
+huggingface_hub==2.1.1

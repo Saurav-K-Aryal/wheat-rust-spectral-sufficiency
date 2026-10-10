@@ -1,0 +1,37 @@
+% Written by scripts/tables/04_robustness.py from results/. Rebuild instead of editing.
+\begin{table}[tbp]
+\caption{Robustness of the contrasts behind the main statements. Diff.\ is the mean paired difference over outer folds (macro-F1 unless marked AUC) with its central 95 percent credible interval. The three verdict columns label the posteriors of the Bayesian correlated $t$-test with a ROPE of plus or minus \RobROPELow{}, \ROPE{} (the paper's), and \RobROPEHigh{}. Verdicts take the largest of the three posteriors and call it clear above 0.95, probable above 0.75, and leaning above 0.5, and inconclusive otherwise. prob.\ is probable, lean.\ leaning, inconcl.\ inconclusive, and equiv.\ equivalent. $q$ is the Benjamini-Hochberg adjustment of the corrected resampled $t$-test over all \RobNContrasts{} contrasts of the paper, and a difference counts as confirmed when $q$ is below 0.05 before rounding. Confirmatory contrasts were specified in the study plan before any result existed; the others were added after the first round of results.\label{tab:headline}}
+\begin{adjustwidth}{-\extralength}{0cm}
+\centering
+\footnotesize
+\begin{tabularx}{\fulllength}{>{\raggedright\arraybackslash}X ccccc}
+\toprule
+\textbf{Contrast (A minus B)} & \textbf{Diff. (95\% CrI)} & \textbf{ROPE \RobROPELow{}} & \textbf{ROPE \ROPE{}} & \textbf{ROPE \RobROPEHigh{}} & \textbf{$q$, BH} \\
+\midrule
+\multicolumn{6}{l}{\textit{Confirmatory, planned before any result existed}} \\
+RGB features from HS bands minus RGB PNG, FLAML & +0.117 (+0.063, +0.171) & clear better & clear better & clear better & $<$0.001 \\
+MS features from HS bands minus MS file, FLAML & $-$0.005 ($-$0.043, +0.033) & inconcl. & lean. equiv. & prob. equiv. & 0.895 \\
+MS minus RGB features from HS bands, FLAML & +0.029 ($-$0.023, +0.081) & prob. better & lean. better & lean. equiv. & 0.476 \\
+Cleaned HS minus MS, FLAML & +0.018 ($-$0.025, +0.061) & lean. better & inconcl. & lean. equiv. & 0.603 \\
+Fixed MS minus fixed RGB placement, FLAML & +0.043 (0.000, +0.086) & prob. better & prob. better & lean. better & 0.176 \\
+Three selected bands minus fixed RGB placement, FLAML & +0.001 ($-$0.053, +0.056) & inconcl. & lean. equiv. & lean. equiv. & 0.989 \\
+Five selected bands minus fixed MS placement, FLAML & $-$0.024 ($-$0.078, +0.030) & lean. worse & lean. worse & lean. equiv. & 0.583 \\
+\midrule
+\multicolumn{6}{l}{\textit{Exploratory, added after the first round of results}} \\
+RGB features from HS bands minus RGB PNG, TabPFN & +0.082 (+0.037, +0.127) & clear better & clear better & clear better & 0.007 \\
+MS minus RGB features from HS bands, TabPFN & +0.067 (+0.029, +0.105) & clear better & clear better & clear better & 0.008 \\
+Cleaned HS minus MS, TabPFN & +0.030 ($-$0.004, +0.063) & prob. better & lean. better & lean. equiv. & 0.221 \\
+Fixed MS minus fixed RGB placement, TabPFN & +0.064 (+0.023, +0.104) & clear better & clear better & clear better & 0.016 \\
+Five selected bands minus fixed MS placement, TabPFN & $-$0.038 ($-$0.080, +0.005) & prob. worse & prob. worse & lean. worse & 0.221 \\
+Stretched and quantised HS bands minus HS bands, RGB features, FLAML & $-$0.137 ($-$0.188, $-$0.085) & clear worse & clear worse & clear worse & $<$0.001 \\
+Stretched and quantised HS bands minus HS bands, RGB features, TabPFN & $-$0.106 ($-$0.154, $-$0.057) & clear worse & clear worse & clear worse & $<$0.001 \\
+Cleaned HS minus MS, raw band statistics, FLAML & $-$0.002 ($-$0.053, +0.049) & inconcl. & lean. equiv. & prob. equiv. & 0.981 \\
+Cleaned HS minus MS, FLAML (AUC, vegetated patches) & +0.056 ($-$0.002, +0.113) & prob. better & prob. better & prob. better & 0.194 \\
+Cleaned HS minus MS, TabPFN (AUC, vegetated patches) & +0.042 (+0.007, +0.077) & clear better & prob. better & lean. better & 0.087 \\
+RGB processing cost minus red-edge and NIR gain, FLAML & +0.088 ($-$0.006, +0.181) & prob. better & prob. better & prob. better & 0.210 \\
+RGB processing cost minus red-edge and NIR gain, TabPFN & +0.015 ($-$0.055, +0.084) & lean. better & inconcl. & lean. equiv. & 0.835 \\
+TabPFN minus FLAML, all views & +0.041 (+0.013, +0.070) & clear better & prob. better & prob. better & 0.028 \\
+\bottomrule
+\end{tabularx}
+\end{adjustwidth}
+\end{table}

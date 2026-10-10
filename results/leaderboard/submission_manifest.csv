@@ -1,0 +1,8 @@
+sid,file,message,valid,errors,n_Health,n_Rust,n_Other,selected
+S01,S01_flaml_all.csv,S01 FLAML baseline all views,True,,75,132,93,xgb_limitdepth
+S02,S02_flaml_rgb.csv,S02 FLAML baseline RGB view,True,,47,142,111,sgd
+S03,S03_flaml_ms.csv,S03 FLAML baseline MS view,True,,87,116,97,lgbm
+S04,S04_flaml_hs_clean.csv,S04 FLAML baseline cleaned HS view,True,,89,121,90,xgb_limitdepth
+S05,S05_tabpfn_all.csv,S05 TabPFN all views,True,,88,126,86,tabpfn_v2
+S07,S07_flaml_bandsel5.csv,S07 FLAML optimally placed five bands,True,,66,132,102,xgb_limitdepth
+S09,S09_flaml_rgb_from_hs.csv,S09 FLAML single-source RGB features from HS bands,True,,79,121,100,xgboost

@@ -1,0 +1,20 @@
+# competition data, caches, and model checkpoints (never committed)
+data/*
+!data/README.md
+cache/
+models/
+# per-unit files written during training; the tidy tables in results/ are committed
+results/**/units/
+results/**/models/
+results/E8/hr_units*/
+results/E10/crossbatch/
+results/holdout/*.pkl
+# rebuilt by scripts/analysis
+results/analysis/
+# Python and LaTeX by-products
+__pycache__/
+*.pyc
+.venv/
+*.aux
+*.log
+.DS_Store

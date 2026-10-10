@@ -1,0 +1,50 @@
+% Written by scripts/tables/02_tables.py from results/. Rebuild instead of editing.
+\begin{table}[H]
+\caption{Macro-F1 contrasts cited in the paper, by family.\label{tab:contrasts-f1}}
+\begin{adjustwidth}{-\extralength}{0cm}
+\centering
+\footnotesize
+\begin{tabularx}{\fulllength}{>{\raggedright\arraybackslash}X cccccc>{\raggedright\arraybackslash}p{2.75cm}}
+\toprule
+\textbf{Contrast (A minus B)} & \textbf{Diff.} & \textbf{P(A$>$B)} & \textbf{P(equiv.)} & \textbf{P(A$<$B)} & \textbf{$p$} & \textbf{$p$, Holm} & \textbf{Verdict} \\
+\midrule
+\multicolumn{8}{l}{\textit{Planned contrasts, FLAML}} \\
+RGB features from HS bands minus RGB PNG & +0.117 & $>$0.99 & $<$0.01 & $<$0.01 & $<$0.001 & $<$0.001 & better, clear \\
+MS features from HS bands minus MS file & $-$0.005 & 0.10 & 0.69 & 0.21 & 0.804 & 1.000 & leaning equivalent \\
+MS minus RGB features from HS bands & +0.029 & 0.63 & 0.33 & 0.03 & 0.273 & 1.000 & leaning better \\
+cleaned HS minus MS & +0.018 & 0.46 & 0.50 & 0.04 & 0.407 & 1.000 & inconclusive \\
+cleaned HS minus full HS & +0.006 & 0.27 & 0.60 & 0.13 & 0.786 & 1.000 & leaning equivalent \\
+cleaned HS engineered minus raw band statistics & +0.074 & 0.99 & 0.01 & $<$0.01 & 0.001 & 0.010 & better, clear \\
+cleaned HS engineered minus 10 PCA scores & +0.038 & 0.81 & 0.19 & $<$0.01 & 0.071 & 0.497 & better, probable \\
+fixed MS minus fixed RGB placement & +0.043 & 0.86 & 0.14 & $<$0.01 & 0.049 & 0.393 & better, probable \\
+three selected bands minus fixed RGB placement & +0.001 & 0.25 & 0.53 & 0.22 & 0.966 & 1.000 & leaning equivalent \\
+five selected bands minus fixed MS placement & $-$0.024 & 0.05 & 0.38 & 0.56 & 0.375 & 1.000 & leaning worse \\
+\midrule
+\multicolumn{8}{l}{\textit{TabPFN versions of the planned contrasts$^{\dagger}$}} \\
+RGB features from HS bands minus RGB PNG & +0.082 & $>$0.99 & $<$0.01 & $<$0.01 & $<$0.001 & 0.005 & better, clear \\
+MS features from HS bands minus MS file & +0.005 & 0.04 & 0.95 & $<$0.01 & 0.548 & 1.000 & equivalent, clear \\
+MS minus RGB features from HS bands & +0.067 & 0.99 & 0.01 & $<$0.01 & $<$0.001 & 0.006 & better, clear \\
+cleaned HS minus MS & +0.030 & 0.72 & 0.28 & $<$0.01 & 0.079 & 0.396 & leaning better \\
+fixed MS minus fixed RGB placement & +0.064 & 0.98 & 0.02 & $<$0.01 & 0.003 & 0.015 & better, clear \\
+three selected bands minus fixed RGB placement & +0.006 & 0.29 & 0.56 & 0.15 & 0.805 & 1.000 & leaning equivalent \\
+five selected bands minus fixed MS placement & $-$0.038 & $<$0.01 & 0.20 & 0.80 & 0.079 & 0.396 & worse, probable \\
+32 selected bands minus fixed MS placement & $-$0.013 & 0.06 & 0.58 & 0.36 & 0.530 & 1.000 & leaning equivalent \\
+\midrule
+\multicolumn{8}{l}{\textit{Controls added after the first round of results$^{\dagger}$}} \\
+stretched and quantised HS bands minus HS bands, RGB features, FLAML & $-$0.137 & $<$0.01 & $<$0.01 & $>$0.99 & $<$0.001 & $<$0.001 & worse, clear \\
+RGB PNG minus stretched and quantised HS bands, FLAML & +0.020 & 0.51 & 0.48 & 0.01 & 0.211 & 0.632 & leaning better \\
+stretched and quantised HS bands minus HS bands, RGB features, TabPFN & $-$0.106 & $<$0.01 & $<$0.01 & $>$0.99 & $<$0.001 & $<$0.001 & worse, clear \\
+RGB PNG minus stretched and quantised HS bands, TabPFN & +0.024 & 0.60 & 0.40 & $<$0.01 & 0.112 & 0.561 & leaning better \\
+eight selected bands without minus with pairwise normalised differences, FLAML & $-$0.039 & 0.02 & 0.23 & 0.76 & 0.157 & 0.629 & worse, probable \\
+eight selected bands without minus with pairwise normalised differences, TabPFN & $-$0.021 & 0.03 & 0.46 & 0.51 & 0.313 & 0.632 & leaning worse \\
+cleaned HS minus MS, raw band statistics, FLAML & $-$0.002 & 0.20 & 0.56 & 0.24 & 0.936 & 0.936 & leaning equivalent \\
+\midrule
+\multicolumn{8}{l}{\textit{Differences between two contrasts on the same folds$^{\dagger}$}} \\
+RGB processing cost minus red-edge and NIR gain, FLAML & +0.088 & 0.92 & 0.06 & 0.01 & 0.066 & 0.199 & better, probable \\
+RGB processing cost minus red-edge and NIR gain, TabPFN & +0.015 & 0.44 & 0.40 & 0.16 & 0.675 & 0.675 & inconclusive \\
+red-edge and NIR gain with TabPFN minus with FLAML & +0.038 & 0.77 & 0.22 & 0.01 & 0.119 & 0.238 & better, probable \\
+\bottomrule
+\end{tabularx}
+\end{adjustwidth}
+\noindent{\footnotesize Diff.\ is the mean paired difference over outer folds. The three probabilities are the posteriors of the Bayesian correlated $t$-test with a ROPE of plus or minus \ROPE{}, $p$ is the two-sided corrected resampled $t$-test, and Holm adjusts $p$ within each family (block). The verdict applies the thresholds of Section~\ref{sec:results} to the largest posterior. $^{\dagger}$Added after the first round of results.}
+\end{table}

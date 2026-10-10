@@ -1,0 +1,31 @@
+% Written by scripts/tables/02_tables.py from results/. Rebuild instead of editing.
+\begin{table}[H]
+\caption{Macro-F1 of TabPFN minus FLAML on identical inputs and folds.\label{tab:contrasts-learner}}
+\begin{adjustwidth}{-\extralength}{0cm}
+\centering
+\footnotesize
+\begin{tabularx}{\fulllength}{>{\raggedright\arraybackslash}X cccccc>{\raggedright\arraybackslash}p{2.75cm}}
+\toprule
+\textbf{Contrast (A minus B)} & \textbf{Diff.} & \textbf{P(A$>$B)} & \textbf{P(equiv.)} & \textbf{P(A$<$B)} & \textbf{$p$} & \textbf{$p$, Holm} & \textbf{Verdict} \\
+\midrule
+\multicolumn{8}{l}{\textit{TabPFN minus FLAML on the same inputs$^{\dagger}$}} \\
+RGB PNG & +0.027 & 0.62 & 0.36 & 0.02 & 0.225 & 1.000 & leaning better \\
+MS view & +0.031 & 0.71 & 0.28 & 0.01 & 0.114 & 1.000 & leaning better \\
+cleaned HS view & +0.043 & 0.85 & 0.15 & $<$0.01 & 0.054 & 0.597 & better, probable \\
+all views & +0.041 & 0.93 & 0.07 & $<$0.01 & 0.005 & 0.076 & better, probable \\
+RGB features from HS bands & $-$0.008 & 0.06 & 0.69 & 0.25 & 0.666 & 1.000 & leaning equivalent \\
+MS features from HS bands & +0.041 & 0.86 & 0.14 & $<$0.01 & 0.039 & 0.472 & better, probable \\
+fixed RGB placement & +0.018 & 0.45 & 0.53 & 0.02 & 0.315 & 1.000 & leaning equivalent \\
+fixed MS placement & +0.039 & 0.80 & 0.20 & 0.01 & 0.092 & 0.915 & better, probable \\
+1 selected band & +0.008 & 0.29 & 0.61 & 0.10 & 0.711 & 1.000 & leaning equivalent \\
+2 selected bands & +0.016 & 0.41 & 0.55 & 0.03 & 0.414 & 1.000 & leaning equivalent \\
+3 selected bands & +0.023 & 0.57 & 0.43 & 0.01 & 0.196 & 1.000 & leaning better \\
+5 selected bands & +0.025 & 0.62 & 0.37 & $<$0.01 & 0.121 & 1.000 & leaning better \\
+8 selected bands & +0.034 & 0.75 & 0.24 & 0.01 & 0.112 & 1.000 & leaning better \\
+16 selected bands & +0.071 & 0.97 & 0.03 & $<$0.01 & 0.012 & 0.154 & better, clear \\
+32 selected bands & +0.079 & 0.99 & 0.01 & $<$0.01 & 0.001 & 0.018 & better, clear \\
+\bottomrule
+\end{tabularx}
+\end{adjustwidth}
+\noindent{\footnotesize Diff.\ is the mean paired difference over outer folds. The three probabilities are the posteriors of the Bayesian correlated $t$-test with a ROPE of plus or minus \ROPE{}, $p$ is the two-sided corrected resampled $t$-test, and Holm adjusts $p$ within each family (block). The verdict applies the thresholds of Section~\ref{sec:results} to the largest posterior. $^{\dagger}$Added after the first round of results.}
+\end{table}
