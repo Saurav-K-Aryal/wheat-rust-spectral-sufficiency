@@ -214,4 +214,4 @@ If this code or these results help your work, please cite the paper. The entry w
 
 The code and the shipped results are released under the MIT License (see `LICENSE`). The competition data are not
 part of this repository and remain under the terms set by the competition organisers, whom we thank for releasing
-them. This research was funded in part by the Office of Naval Research, grant number N00014-22-1-2714.
+them. 
