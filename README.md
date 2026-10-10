@@ -201,8 +201,7 @@ If this code or these results help your work, please cite the paper. The entry w
 ```bibtex
 @article{aryal2026spectral,
   author  = {Aryal, Saurav K. and Uprety, Aashma and Adhikari, Ashish},
-  title   = {Assessing the Spectral Sufficiency of {UAV} Wheat Rust Classification with Views and Band Budgets
-             Derived from One Hyperspectral Acquisition},
+  title   = {Assessing the Spectral Sufficiency of Wheat Rust Classification: Views and Band Budgets from a {UAV} Hyperspectral Acquisition},
   journal = {Sensors},
   year    = {2026},
   note    = {Submitted}
